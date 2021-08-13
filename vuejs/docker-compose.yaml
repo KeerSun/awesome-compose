@@ -1,6 +1,8 @@
 version: "3.7"
 services:
   web:
+    labels:
+      shipyard.route: '/'
     build: vuejs
     ports:
       - 8080:8080
