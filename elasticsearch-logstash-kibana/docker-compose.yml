@@ -2,8 +2,6 @@ version: '3.8'
 
 services:
   elasticsearch:
-    labels:
-      shipyard.route: '/'
     image: elasticsearch:7.8.0
     container_name: es
     environment:
@@ -20,6 +18,8 @@ services:
     networks:
       - elastic
   logstash:
+    labels:
+      shipyard.route: '/'
     image: logstash:7.8.0
     container_name: log
     environment:
