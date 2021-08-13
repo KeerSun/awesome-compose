@@ -31,6 +31,8 @@ services:
     networks:
       - spring-mysql
   frontend:
+    labels:
+      shipyard.route: '/'
     build:
       context: frontend
       target: development
