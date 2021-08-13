@@ -1,6 +1,8 @@
 version: "3.7"
 services:
   frontend:
+    labels:
+      shipyard.route: '/'
     image: traefik:2.2
     command: --providers.docker --entrypoints.web.address=:80 --providers.docker.exposedbydefault=false
     ports:
