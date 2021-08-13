@@ -12,6 +12,8 @@ services:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
   grafana:
+    labels:
+      shipyard.route: '/'
     image: grafana/grafana
     container_name: grafana
     ports:
