@@ -26,6 +26,8 @@ services:
     expose:
       - 3306
   proxy:
+    labels:
+      shipyard.route: '/'
     build: proxy
     ports:
       - 80:80
