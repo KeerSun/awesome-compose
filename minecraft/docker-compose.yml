@@ -1,6 +1,8 @@
 version: '3.7'
 services:
  minecraft:
+   labels:
+      shipyard.route: '/'
    image: itzg/minecraft-server
    ports:
      - "25565:25565"
