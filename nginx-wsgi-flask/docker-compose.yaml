@@ -18,6 +18,8 @@ services:
       retries: 3
     command: /app/start.sh
   flask-app:
+    labels:
+      shipyard.route: '/'
     build: flask
     restart: always
     ports: 
