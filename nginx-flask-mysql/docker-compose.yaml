@@ -35,6 +35,8 @@ services:
       db:
         condition: service_healthy
   proxy:
+    labels:
+      shipyard.route: '/'
     build: proxy
     restart: always
     ports:
