@@ -2,6 +2,8 @@ version: '3.8'
 
 services:
   elasticsearch:
+    labels:
+      shipyard.route: '/'
     image: elasticsearch:7.8.0
     container_name: es
     environment:
