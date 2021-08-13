@@ -1,6 +1,8 @@
 version: '3.7'
 services:
   nc:
+    labels:
+      shipyard.route: '/'
     image: nextcloud:apache
     restart: always
     ports:
