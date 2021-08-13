@@ -1,6 +1,8 @@
 version: "3.7"
 services:
   web:
+    labels:
+      shipyard.route: '/'
     image: nginx
     volumes:
       - ./nginx/nginx.conf:/tmp/nginx.conf
