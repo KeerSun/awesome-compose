@@ -1,6 +1,8 @@
 version: "3.7"
 services:
   sparkjava:
+    labels:
+      shipyard.route: '/'
     build: sparkjava
     ports:
       - 8080:8080
